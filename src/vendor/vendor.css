@@ -1,0 +1,383 @@
+.v-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.v-inner {
+    padding: 0.8rem 1rem;
+    background-color: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 0.7rem;
+}
+
+.v-header {
+    /* color: rgb(4, 170, 109); */
+    text-align: center;
+    margin: 0.5rem 0rem;
+}
+
+.v-inner input {
+    width: 100%;
+    padding: 0.3rem;
+    margin-bottom: 0.2rem;
+    border-radius: 0.2rem;
+    border: 1px solid black;
+    outline: none;
+}
+
+.v-btns {
+    padding-top: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.v-btns button {
+    background-color:rgb(4, 170, 109);
+    border: none;
+    border-radius: 0.3rem;
+    color: white;
+    transition: background-color 300ms ease;
+}
+
+.v-back {
+    padding: 0.4rem 1.4rem;
+}
+
+.v-sign-up, .v-sign-in {
+    padding: 0.4rem 1.1rem;
+}
+
+.v-btns button:hover {
+    background-color: rgba(4, 170, 109, 0.9);
+    cursor: pointer;
+}
+
+.v-login-link {
+    margin-top: 0.5rem;
+}
+
+.v-scroll {
+    max-height: 290px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.login-btn, .register-btn {
+    background-color: transparent;
+    border: none;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* VENDOR DASHBOARD */
+.vdb-nav {
+    /* border: 2px solid black; */
+    height: 8vh;
+    background-color: white;
+    color: rgb(4, 170, 109);
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 0.5rem;
+}
+
+.vdb-profile {
+    cursor: pointer;
+    padding: 0.3rem 0.5rem;
+    border: 1.5px solid rgb(4, 170, 109);
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.vdb-profile-info {
+    color: black;
+    padding: 0.5rem;
+    background-color: white;
+    position: absolute;
+    top: 3rem;
+    right: 0rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 0.2rem;
+
+    display: none;
+}
+
+.vdb-profile:hover .vdb-profile-info {
+    display: block;
+}
+
+.vdb-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.vdb-add-btn  {
+    background-color: rgb(4, 170, 109);
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+
+    transition: background-color 300ms ease;
+}
+
+.vdb-add-btn:hover {
+    background-color: rgba(4, 170, 109, 0.9);
+}
+
+.vdb-no-products-msg {
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+.vdb-product {
+    background-color: white;
+    padding: 0.8rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 0.3rem;
+    position: relative;
+}
+
+.vdb-image {
+    max-height: 250px;
+}
+
+.vdb-view-photo {
+    padding: 0.3rem;
+    position: absolute;
+    right: 1rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.vdb-info {
+    /* border: 2px solid black; */
+    margin-top: 0.5rem;
+    padding: 0.1rem;
+}
+
+.vdb-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* prevents stretching */
+}
+
+.vdb-products {
+    display: grid;
+    gap: 2rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    margin-top: 10vh;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.vdb-saree-name {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.vdb-saree-price {
+    font-size: 1.2rem;
+}
+
+.vdb-btns {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 0.5rem;
+}
+
+.vdb-btns button {
+    
+    background-color: rgb(4, 170, 109);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: background-color 300ms ease;
+}
+
+.vdb-btns .vdb-del-btn {
+    padding: 0.5rem 1.1rem;
+}
+
+.vdb-btns button:hover {
+    background-color: rgba(4, 170, 109, 0.9);
+}
+
+@media (min-width : 300px) and (max-width : 550px)
+{
+    .vdb-products {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width : 551px) and (max-width : 768px)
+{
+    .vdb-products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* VENDOR PRODUCT FORM */
+.vpf-outer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vpf-header{
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.vpf-inner {
+    min-width: 300px;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.vpf-form {
+    max-height: 300px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.vpf-form input {
+    width: 100%;
+    padding: 0.3rem 0.3rem;
+    margin-bottom: 0.3rem;
+    outline: none;
+    border-radius: 0.2rem;
+    border: 1px solid black;
+}
+
+.vpf-form .img {
+    border: none;
+}
+
+.vpf-btns {
+    padding: 0.5rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vpf-add-btn, .vpf-back-btn {
+    cursor: pointer;
+    background-color: rgb(4, 170, 109);
+    border: none;
+    border-radius: 0.3rem;
+    color: white;
+    transition: background-color 300ms ease;
+}
+
+.vpf-back-btn {
+    padding: 0.4rem 1.5rem;
+}
+
+.vpf-add-btn {
+    padding: 0.4rem 0.8rem;
+}
+
+.vpf-add-btn:hover, .vpf-back-btn:hover {
+    background-color: rgba(4, 170, 109, 0.9);
+}
+
+
+/* Vendor Profile */
+.vp-outer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vp-inner {
+    min-width: 300px;
+    /* border: 2px solid black; */
+    padding: 0.8rem;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.vp-header {
+    text-align: center;
+    margin: 0.6rem 0rem;
+}
+
+.vp-btns {
+    padding-top: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vp-btns button {
+    background-color: rgb(4, 170, 109);
+    border: none;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+
+    transition: background-color 300ms ease;
+}
+
+.vp-btns .vp-back-btn {
+    padding: 0.4rem 1.5rem;
+}
+
+
+.vp-btns button:hover {
+    background-color: rgba(4, 170, 109, 0.9);
+}
+
+/* VDB image */
+.vdb-image-outer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.vdb-image-inner {
+    position: relative;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+
+.vdb-image-photo {
+    position: absolute;
+    right: 1rem;
+    top: 1.2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.vdb-image-inner img{
+    height: 70vh;
+}

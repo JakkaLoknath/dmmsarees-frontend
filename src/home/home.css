@@ -1,0 +1,167 @@
+.nav-outer {
+    height: 8vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0.5rem;
+}
+
+.nav-first {
+    color: rgb(4, 170, 109);
+    font-weight: bold;
+}
+
+.nav-second button {
+    padding: 0.4rem 0.9rem;
+    background-color: rgb(4, 170, 109);
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    transition: background-color 300ms ease;
+
+    cursor: pointer;
+}
+
+.nav-second button:hover {
+    background-color: rgba(4, 170, 109, 0.9);
+}
+
+.nav-outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.home-product {
+    position: relative;
+    background-color: white;
+    padding: 0.8rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 0.3rem;
+}
+
+.home-product .home-btns {
+    align-self:flex-end;
+}
+
+
+.home-view-photo {
+    position: absolute;
+    right: 1rem;
+    padding: 0.4rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.home-image {
+    max-height: 250px;
+}
+
+.home-info {
+    /* border: 2px solid black; */
+    margin-top: 0.5rem;
+    padding: 0.1rem;
+}
+
+.home-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; 
+}
+
+.home-products {
+    display: grid;
+    gap: 2rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    margin-top: 10vh;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+
+.home-saree-name {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.home-saree-price {
+    font-size: 1.2rem;
+}
+
+.home-btns {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 0.5rem 0rem;
+    gap: 0.5rem;
+}
+
+.home-btns button {
+    background-color: rgb(4, 170, 109);
+    transition: background-color 300ms ease;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+.home-btns .home-add-btn {
+    padding: 0.4rem 1rem;
+}
+
+.home-btns .home-info-btn {
+    padding: 0.4rem 1.2rem;
+}
+
+.home-btns button:hover {
+    background-color: rgba(4, 170, 109, 0.9);
+}
+
+@media (min-width : 300px) and (max-width : 550px)
+{
+    .home-products {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width : 551px) and (max-width : 768px)
+{
+    .home-products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* HOME IMAGE */
+.home-image-outer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-image-inner {
+    position: relative;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+
+.home-image-photo {
+    position: absolute;
+    right: 1rem;
+    top: 1.2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.home-image-inner img{
+    height: 70vh;
+}
+

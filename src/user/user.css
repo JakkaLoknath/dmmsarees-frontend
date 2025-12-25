@@ -1,0 +1,594 @@
+.u-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.u-inner {
+    padding: 0.8rem 1rem;
+    background-color: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 0.7rem;
+}
+
+.u-header {
+    /* color: rgb(4, 170, 109); */
+    text-align: center;
+    margin: 0.5rem 0rem;
+}
+
+.u-inner input {
+    width: 100%;
+    padding: 0.3rem;
+    margin-bottom: 0.2rem;
+    border-radius: 0.2rem;
+    border: 1px solid black;
+    outline: none;
+}
+
+.u-btns {
+    padding-top: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.u-btns button {
+    background-color:rgb(4, 170, 109);
+    border: none;
+    border-radius: 0.3rem;
+    color: white;
+    transition: background-color 300ms ease;
+}
+
+.u-back {
+    padding: 0.4rem 1.4rem;
+}
+
+.u-sign-up, .u-sign-in {
+    padding: 0.4rem 1.1rem;
+}
+
+.u-btns button:hover {
+    background-color: rgba(4, 170, 109, 0.9);
+    cursor: pointer;
+}
+
+.u-login-link {
+    margin-top: 0.5rem;
+}
+
+.u-scroll {
+    max-height: 290px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.login-btn, .register-btn {
+    background-color: transparent;
+    border: none;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* USER DASHBOARD */
+
+.udb-nav {
+    /* border: 2px solid black; */
+    height: 8vh;
+    background-color: white;
+    color: rgb(4, 170, 109);
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 0.5rem;
+}
+
+.udb-nav-second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.udb-cart, .udb-profile {
+    cursor: pointer;
+    padding: 0.3rem 0.5rem;
+    border: 1.5px solid rgb(4, 170, 109);
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.udb-profile-info {
+    color: black;
+    padding: 0.5rem;
+    background-color: white;
+    position: absolute;
+    top: 3rem;
+    right: 0rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 0.2rem;
+
+    display: none;
+}
+
+.udb-profile:hover .udb-profile-info {
+    display: block;
+}
+
+.udb-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.udb-add-btn  {
+    background-color: rgb(4, 170, 109);
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+
+    transition: background-color 300ms ease;
+}
+
+.udb-add-btn:hover {
+    background-color: rgba(4, 170, 109, 0.9);
+}
+
+.udb-no-products-msg {
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+.udb-product {
+    background-color: white;
+    padding: 0.8rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 0.3rem;
+    position: relative;
+}
+
+.udb-image {
+    max-height: 250px;
+}
+
+.udb-view-photo {
+    padding: 0.3rem;
+    position: absolute;
+    right: 1rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.udb-info {
+    /* border: 2px solid black; */
+    margin-top: 0.5rem;
+    padding: 0.1rem;
+}
+
+.udb-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* prevents stretching */
+}
+
+.udb-products {
+    display: grid;
+    gap: 2rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    margin-top: 10vh;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.udb-saree-name {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.udb-saree-price {
+    font-size: 1.2rem;
+}
+
+.udb-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.3rem;
+    gap: 0.5rem;
+}
+
+.udb-btns button {
+    
+    background-color: rgb(4, 170, 109);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: background-color 300ms ease;
+}
+
+.udb-btns .udb-del-btn {
+    padding: 0.5rem 1.1rem;
+}
+
+.udb-btns button:hover {
+    background-color: rgba(4, 170, 109, 0.9);
+}
+
+@media (min-width : 300px) and (max-width : 550px)
+{
+    .udb-products {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width : 551px) and (max-width : 768px)
+{
+    .udb-products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width : 769px)
+{
+    .udb-products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* UDB image */
+.udb-image-outer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.udb-image-inner {
+    position: relative;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+
+.udb-image-photo {
+    position: absolute;
+    right: 1rem;
+    top: 1.2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.udb-image-inner img{
+    height: 70vh;
+}
+
+/* USER PROFILE */
+.up-outer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.up-inner {
+    min-width: 300px;
+    /* border: 2px solid black; */
+    padding: 0.8rem;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.up-header {
+    text-align: center;
+    margin: 0.6rem 0rem;
+}
+
+.up-btns {
+    padding-top: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.up-btns button {
+    background-color: rgb(4, 170, 109);
+    border: none;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+
+    transition: background-color 300ms ease;
+}
+
+.up-btns .up-back-btn {
+    padding: 0.4rem 1.5rem;
+}
+
+
+.up-btns button:hover {
+    background-color: rgba(4, 170, 109, 0.9);
+}
+
+
+/* User product info */
+.upi-outer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upi-inner {
+    min-width: 300px;
+    background-color: white;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4)
+}
+
+.upi-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upi-image img {
+    object-fit: cover;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4)
+}
+
+.upi-info {
+    margin-top: 1rem;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.upi-saree-name {
+    font-size: 1.1rem;
+}
+.upi-info p {
+    margin: 0.1rem 0rem;
+}
+
+.upi-info h3 {
+    margin: 0.3rem 0rem;
+}
+
+.upi-btns {
+    padding-top: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.upi-btns button {
+    border: none;
+    background-color: rgb(4, 170, 109);
+    color: white;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    transition: background-color 300ms ease;
+}
+
+.upi-btns .upi-back-btn {
+    padding: 0.4rem 2rem;
+}
+
+.upi-btns button:hover {
+    background-color: rgba(4, 170, 109, 0.9);
+}
+
+@media (max-width : 425px)
+{
+    .upi-image img {
+        max-width: 125px;
+    }
+}
+
+@media (min-width : 425px)
+{
+    .upi-image img {
+        max-width: 150px;
+    }
+
+    .upi-inner {
+        min-width: 400px;
+    }
+}
+
+/* USER CART PRODUCT */
+.ucp-outer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ucp-product {
+    background-color: white;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+}
+
+.ucp-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.ucp-counter input {
+    max-width: 3rem;
+    text-align: center;
+}
+
+.ucp-product h4 {
+    text-align: center;
+    margin-bottom: 0.3rem;
+}
+
+.ucp-counter button {
+    cursor: pointer;
+}
+
+.ucp-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ucp-btns button {
+    background-color: rgb(4, 170, 109);
+    border: none;
+    color: white;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 300ms ease;
+}
+
+.ucp-back-btn {
+    padding: 0.4rem 1rem;
+}
+
+.ucp-add-btn {
+    padding: 0.4rem 1.2rem;
+}
+
+.ucp-btns button:hover {
+    background-color: rgba(4, 170, 109, 0.9);
+}
+
+
+/* user cart products */
+
+.uc-inner-one {
+    height: 8vh;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 0.5rem;
+}
+
+.uc-inner-one button{
+    background-color: rgb(4, 170, 109);
+    padding: 0.4rem 1rem;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 300ms ease;
+}
+
+
+.uc-inner-one button:hover {
+    background-color: rgba(4, 170, 109, 0.9);
+}
+
+.uc-inner {
+    margin-top: 8vh;
+    padding: 0.5rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.uc-quan-header {
+    text-align: center;
+    margin: 0.3rem;
+}
+
+@media (min-width : 300px) and (max-width : 550px)
+{
+    .uc-inner {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width : 551px) and (max-width : 768px)
+{
+    .uc-inner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width : 769px)
+{
+    .uc-inner {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* user bill */
+.ub-outer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ub-inner {
+    background-color: white;
+    padding: 0.8rem;
+    border-radius: 0.2rem;
+}
+
+h3 {
+    text-align: center;
+}
+
+table, th, tr, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 0.3rem;
+}
+
+th {
+   text-align: left; 
+}
+
+.ub-table {
+    max-height: 310px;
+    overflow-y: auto;
+    margin: 0.8rem 0rem;
+}
+
+.ub-btn button {
+    padding: 0.4rem 1rem;
+    background-color: rgb(4, 170, 109);
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+
+    transition: background-color 300ms ease;
+}
+
+.ub-btn button:hover {
+    background-color: rgba(4, 170, 109, 0.9);
+}

@@ -1,0 +1,42 @@
+.t-outer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.t-inner {
+    /* border: 2px solid black; */
+    padding: 0.5rem;
+    min-width: 200px;
+}
+
+.t-header {
+    text-align: center;
+}
+
+.t-inner button{
+    width: 100%;
+    margin: 0.3rem 0rem;
+    padding: 0.5rem;
+
+    background-color: rgb(4, 170, 109);
+    color: white;
+    border: none;
+    border-radius: 0.2rem;
+    transition: background-color 300ms ease;
+    cursor: pointer;
+}
+
+.t-inner button:hover {
+    background-color: rgba(4, 170, 109, 0.8);
+}
+.back-div button {
+    background-color: white;
+    color: black;
+}
+
+.back-div button:hover {
+    background-color: white;
+    color: black;
+}
