@@ -87,7 +87,7 @@ export default function UserCart()
                                 }}>Remove Product</button>
                             </div>
                         </div>
-                    ))) : ("LODING OR NO PRODUCTS ARE ADDED")
+                    ))) : ("LOADING OR NO PRODUCTS ARE ADDED")
                 }
             </div>
         </div>

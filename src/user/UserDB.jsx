@@ -76,7 +76,7 @@ export default function VendorDB()
                                 </button>
                             </div>
                         </div>
-                    ))) : (<div className="udb-no-products-msg">LODING OR NO PRODUCTS ADDED</div>)
+                    ))) : (<div className="udb-no-products-msg">LOADING PLEASE WAIT</div>)
                 }
             </div>
         </div>
