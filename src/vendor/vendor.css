@@ -62,7 +62,6 @@
 .v-scroll {
     max-height: 290px;
     overflow-y: auto;
-    scrollbar-width: none;
 }
 
 .login-btn, .register-btn {
