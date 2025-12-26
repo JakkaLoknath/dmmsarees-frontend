@@ -36,12 +36,14 @@ export default function UserProductInto()
                     <h3><u>WEAVER DETAILS</u></h3>
                     <p><b>Name:</b> {p.weaverName}</p>
                     <p><b>Phone:</b> {p.weaverPhone}</p>
+                    <p><b>Description:</b> {p.description}</p>
                 </div>
                 <div className="upi-btns">
                     <button className="upi-back-btn" onClick={() => {
                         navigate("/udb");
                     }}>Back</button>
                     <button onClick={() => {
+                        localStorage.setItem("user-cart-product", JSON.stringify(p));
                         navigate("/ucp");
                     }}>Add to cart</button>
                 </div>

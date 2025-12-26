@@ -11,7 +11,7 @@ export default function VendorRegister()
     const[landmark, setLandmark] = useState("");
     const[city, setCity] = useState("");
     const[state, setState] = useState("");
-    const[pincode, setPincode] = useState(0);
+    const[pincode, setPincode] = useState(1);
     const[password, setPassword] = useState("");
     const[cpassword, setCpassword] = useState("");
 
@@ -23,9 +23,9 @@ export default function VendorRegister()
             return;
         }
 
-        if(pincode === 0) 
+        if(pincode < 1) 
         {
-            alert("Enter pincode");
+            alert("Pincode can not be ZERO or NEGATIVE");
             return;
         }
 
@@ -89,7 +89,7 @@ export default function VendorRegister()
                     <input onChange={(e) => setState(e.target.value)} type="text" name="state" id="state" placeholder="Enter State"/>
 
                     <label htmlFor="pincode">Pincode:</label> <br />
-                    <input onChange={(e) => setPincode(e.target.value)} type="number" name="pincode" id="pincode" placeholder="Enter pincode"/>
+                    <input min={1} onChange={(e) => setPincode(e.target.value)} type="number" name="pincode" id="pincode" placeholder="Enter pincode"/>
 
                     <label htmlFor="password">Password:</label> <br />
                     <input onChange={(e) => setPassword(e.target.value)} type="password" name="password" id="password" placeholder="Enter password"/>
