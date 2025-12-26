@@ -25,9 +25,9 @@ export default function UserProductInto()
                     <p className="upi-saree-name"><i>{p.sareeName}</i></p>
                     <p><b>Material:</b> {p.material}</p>
                     <p><b>Color:</b> {p.color}</p> 
-                    
                     <p><b>Price:</b> ₹{p.price}</p>
                     <p><b>Stock:</b> {p.stock}</p>
+                    <p><b>Description:</b> {p.description}</p>
                     <h3><u>VENDOR DETAILS</u></h3>
                     <p><b>Name:</b> {vendor.name}</p>
                     <p><b>Mail:</b> {vendor.mail}</p>
@@ -36,7 +36,6 @@ export default function UserProductInto()
                     <h3><u>WEAVER DETAILS</u></h3>
                     <p><b>Name:</b> {p.weaverName}</p>
                     <p><b>Phone:</b> {p.weaverPhone}</p>
-                    <p><b>Description:</b> {p.description}</p>
                 </div>
                 <div className="upi-btns">
                     <button className="upi-back-btn" onClick={() => {
