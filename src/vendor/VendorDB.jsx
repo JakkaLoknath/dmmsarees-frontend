@@ -90,7 +90,7 @@ export default function VendorDB()
                                 </button>
                             </div>
                         </div>
-                    ))) : (<div className="vdb-no-products-msg">LOADING OR NO PRODUCTS ADDED</div>)
+                    ))) : (<div className="vdb-no-products-msg">NO PRODUCTS ARE ADDED</div>)
                 }
             </div>
 

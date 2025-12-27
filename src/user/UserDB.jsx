@@ -6,7 +6,6 @@ export default function VendorDB()
     const user = JSON.parse(localStorage.getItem("user"));
     const navigate = useNavigate();
     const [allProducts,setAllProducts] = useState([]);
-    
 
     useEffect(() => {
         if (!user) {
